@@ -13,12 +13,14 @@ namespace WordGuessApplication
     public partial class frmGameOver : Form
     {
 
-        public string word;
-        public bool isGameOver;
+        private string word;
+        private bool isGameOver;
+        private Form form1;
 
-        public frmGameOver(string word, bool isGameOver = false)
+        public frmGameOver(Form form1, string word, bool isGameOver = false)
         {
             InitializeComponent();
+            this.form1 = form1;
             this.word = word;
             this.isGameOver = isGameOver;
         }
@@ -31,11 +33,17 @@ namespace WordGuessApplication
                 title.ForeColor = ColorTranslator.FromHtml("#DC2626");
             } else
             {
-                title.Text = "YOU WIN";
+                title.Text = "SPLENDID";
                 title.ForeColor = ColorTranslator.FromHtml("#6ca965");
             }
 
             yourWord.Text = word;
+        }
+
+        private void newGame_Click(object sender, EventArgs e)
+        {
+            form1.Close();
+            this.Close();
         }
     }
 }

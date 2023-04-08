@@ -149,7 +149,7 @@ namespace WordGuessApplication
                 // Create and show the frmGameOver form on the UI thread
                 this.Invoke(new Action(() =>
                 {
-                    Form frmGameOver = new frmGameOver(wordGen);
+                    Form frmGameOver = new frmGameOver(this, wordGen);
                     frmGameOver.Show();
                 }));
             } else if (currentRow == ROW_NUM)
@@ -159,7 +159,7 @@ namespace WordGuessApplication
                 // Create and show the frmGameOver form on the UI thread
                 this.Invoke(new Action(() =>
                 {
-                    Form frmGameOver = new frmGameOver(wordGen, true);
+                    Form frmGameOver = new frmGameOver(this, wordGen, true);
                     frmGameOver.Show();
                 }));
                 guessWord.BackColor = ColorTranslator.FromHtml("#DC2626");

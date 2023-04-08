@@ -31,6 +31,7 @@
             this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.yourWord = new System.Windows.Forms.Label();
+            this.newGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -65,12 +66,27 @@
             this.yourWord.Text = "ABASE";
             this.yourWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // newGame
+            // 
+            this.newGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.newGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newGame.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.newGame.ForeColor = System.Drawing.Color.White;
+            this.newGame.Location = new System.Drawing.Point(218, 147);
+            this.newGame.Name = "newGame";
+            this.newGame.Size = new System.Drawing.Size(75, 23);
+            this.newGame.TabIndex = 3;
+            this.newGame.Text = "QUIT";
+            this.newGame.UseVisualStyleBackColor = false;
+            this.newGame.Click += new System.EventHandler(this.newGame_Click);
+            // 
             // frmGameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(0)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(514, 152);
+            this.ClientSize = new System.Drawing.Size(514, 198);
+            this.Controls.Add(this.newGame);
             this.Controls.Add(this.yourWord);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.title);
@@ -87,5 +103,6 @@
         private Label title;
         private Label label2;
         private Label yourWord;
+        private Button newGame;
     }
 }
